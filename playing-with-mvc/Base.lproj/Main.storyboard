@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="playing_with_mvc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stewie-stewie-griffin-6574665-450-338" translatesAutoresizingMaskIntoConstraints="NO" id="db9-lm-upA" customClass="RoundedImageView" customModule="playing_with_mvc" customModuleProvider="target">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Wtn-IZ-lr9"/>
+                                    <constraint firstAttribute="height" constant="128" id="rey-61-Dw1"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DDP-p1-Qlh">
+                                <rect key="frame" x="252" y="179" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="8cO-9K-XGA"/>
+                                    <constraint firstAttribute="height" constant="30" id="bdA-Dq-WQy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u35-x4-sDa">
+                                <rect key="frame" x="200" y="129" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4GY-E4-Q0F"/>
+                                    <constraint firstAttribute="height" constant="21" id="uvh-Z6-IN4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0b-nM-cfl">
+                                <rect key="frame" x="285" y="407" width="50" height="35"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1Fw-fa-g53"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Do"/>
+                                <connections>
+                                    <action selector="doChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCM-RN-qZD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="db9-lm-upA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EeO-a4-akh"/>
+                            <constraint firstItem="db9-lm-upA" firstAttribute="top" secondItem="DDP-p1-Qlh" secondAttribute="bottom" constant="27" id="Ict-rr-KFN"/>
+                            <constraint firstItem="u35-x4-sDa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Irb-gy-UV7"/>
+                            <constraint firstItem="X0b-nM-cfl" firstAttribute="top" secondItem="db9-lm-upA" secondAttribute="bottom" constant="43" id="PjE-fT-UT6"/>
+                            <constraint firstItem="u35-x4-sDa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="109" id="aMq-kC-bGt"/>
+                            <constraint firstItem="DDP-p1-Qlh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rAu-1I-PRc"/>
+                            <constraint firstItem="DDP-p1-Qlh" firstAttribute="top" secondItem="u35-x4-sDa" secondAttribute="bottom" constant="29" id="v6s-ia-nzx"/>
+                            <constraint firstItem="X0b-nM-cfl" firstAttribute="centerX" secondItem="db9-lm-upA" secondAttribute="centerX" constant="10" id="vvC-gJ-Tqq"/>
+                            <constraint firstItem="X0b-nM-cfl" firstAttribute="top" secondItem="db9-lm-upA" secondAttribute="bottom" constant="43" id="z6d-Z8-Das"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="z6d-Z8-Das"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="personLabel" destination="u35-x4-sDa" id="Kyv-p0-8hw"/>
+                        <outlet property="textbox" destination="DDP-p1-Qlh" id="2fu-Gh-jdJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Stewie-stewie-griffin-6574665-450-338" width="450" height="338"/>
+    </resources>
 </document>
